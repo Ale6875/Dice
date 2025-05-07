@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gambling Room</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="assets/favicon.png" type="image/png">
+</head>
+<body>
+    <h1 id="title">DICE</h1>
+
+    <div id="main">
+        <form action="php/game.php">
+            <div class="users">
+                <img src="assets/dice1.svg" alt="Dice" class="dice-icon">
+                <h3>UPORABNIK 1 :</h3>
+                <input type="text" id="user1" placeholder="Ime">
+            </div>
+
+            <div class="users">
+                <img src="assets/dice1.svg" alt="Dice" class="dice-icon">
+                <h3>UPORABNIK 2 :</h3>
+                <input type="text" id="user2" placeholder="Ime">
+            </div>
+
+            <div class="users">
+                <img src="assets/dice1.svg" alt="Dice" class="dice-icon">
+                <h3>UPORABNIK 3 :</h3>
+                <input type="text" id="user3" placeholder="Ime">
+            </div>
+
+            <div id="send">
+                <div class="select-group">
+                    <label for="dice">Število kock</label>
+                    <select name="dice" id="dice">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="1">4</option>
+                        <option value="2">5</option>
+                        <option value="3">6</option>
+                    </select>
+                </div>
+    
+                <div class="select-group">
+                    <label for="games">Število iger</label>
+                    <select name="games" id="ganes">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+                </div>
+                <br>
+                <input type="submit" id="button" name="Začni igro" value="Začni igro">
+            </div>
+
+        </form>
+
+    </div>
+</body>
+</html>

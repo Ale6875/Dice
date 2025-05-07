@@ -1,0 +1,98 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: casinoFont, Arial;
+    background-image: url("../assets/background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+}
+
+#title {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 76px;
+    font-weight: bold;
+    text-shadow: 6px 6px black;
+}
+
+#main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 30px auto;
+    background-color: rgba(0, 0, 0, 0.75);
+    width: 80%;
+    max-width: 900px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.users {
+    display: inline-block;
+    margin: 0 15px;
+    text-align: center;
+    vertical-align: top;
+}
+
+.dice-icon {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+#main form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+#send {
+    text-align: center;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.select-group {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 15px;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+input[type="text"] {
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+select {
+    padding: 8px;
+    margin-bottom: 15px;
+}
+
+#button {
+    padding: 10px 20px;
+    background-color: #9e1328;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-top: 10px;
+}
+
+#button:hover {
+    background-color: #9b2f3f;
+}
+
+@font-face {
+    font-family: casinoFont;
+    src: url("../fonts/Casino.ttf");
+}
