@@ -11,41 +11,41 @@
     <h1 id="title">DICE</h1>
 
     <div id="main">
-        <form action="php/game.php">
+        <form action="php/game.php" method="POST">
             <div class="users">
                 <img src="assets/dice1.svg" alt="Dice" class="dice-icon">
                 <h3>UPORABNIK 1 :</h3>
-                <input type="text" id="user1" placeholder="Ime">
+                <input type="text" name="user1" placeholder="Ime" required>
             </div>
 
             <div class="users">
                 <img src="assets/dice1.svg" alt="Dice" class="dice-icon">
                 <h3>UPORABNIK 2 :</h3>
-                <input type="text" id="user2" placeholder="Ime">
+                <input type="text" name="user2" placeholder="Ime" required>
             </div>
 
             <div class="users">
                 <img src="assets/dice1.svg" alt="Dice" class="dice-icon">
                 <h3>UPORABNIK 3 :</h3>
-                <input type="text" id="user3" placeholder="Ime">
+                <input type="text" name="user3" placeholder="Ime" required>
             </div>
 
             <div id="send">
                 <div class="select-group">
                     <label for="dice">Število kock</label>
-                    <select name="dice" id="dice">
+                    <select name="dice" id="dice" required>
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
-                        <option value="1">4</option>
-                        <option value="2">5</option>
-                        <option value="3">6</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
                     </select>
                 </div>
     
                 <div class="select-group">
                     <label for="games">Število iger</label>
-                    <select name="games" id="ganes">
+                    <select name="games" id="games" required>
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
@@ -55,11 +55,9 @@
                     </select>
                 </div>
                 <br>
-                <input type="submit" id="button" name="Začni igro" value="Začni igro">
+                <input type="submit" id="button" value="Začni igro">
             </div>
-
         </form>
-
     </div>
 </body>
 </html>
