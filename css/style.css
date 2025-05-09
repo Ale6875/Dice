@@ -2,9 +2,11 @@ body {
     margin: 0;
     padding: 0;
     font-family: casinoFont, Arial;
-    background-image: url("../assets/background.png");
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-image: url("../assets/background.png") !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-attachment: fixed !important;
+    background-position: center !important;
     color: white;
 }
 
@@ -79,7 +81,7 @@ select {
 
 #button {
     padding: 10px 20px;
-    background-color: #9e1328;
+    background-color: #735ba0;
     color: white;
     border: none;
     border-radius: 4px;
@@ -89,7 +91,7 @@ select {
 }
 
 #button:hover {
-    background-color: #9b2f3f;
+    background-color: #836fa9;
 }
 
 @font-face {
