@@ -1,0 +1,74 @@
+.game-info {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.roll-button {
+    padding: 15px 30px;
+    font-size: 1.2em;
+    background-color: #735ba0;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 20px auto;
+    display: block;
+}
+
+.roll-button:hover {
+    background-color: #836fa9;
+}
+
+.player-status {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.player-box {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 15px;
+    border-radius: 8px;
+    width: 25%;
+    min-width: 200px;
+    margin: 10px;
+    text-align: center;
+}
+
+.current-player {
+    border: 3px solid #735ba0;
+}
+
+.dice-container {
+    margin: 20px auto;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.dice {
+    width: 80px;
+    height: 80px;
+    transition: transform 0.2s;
+}
+
+.rolling {
+    animation: shake 0.5s infinite;
+}
+
+@keyframes shake {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    15% { transform: translate(-5px, -5px) rotate(-5deg); }
+    30% { transform: translate(5px, 5px) rotate(5deg); }
+    45% { transform: translate(-5px, 5px) rotate(-5deg); }
+    60% { transform: translate(5px, -5px) rotate(5deg); }
+    75% { transform: translate(-3px, 3px) rotate(-3deg); }
+    90% { transform: translate(3px, -3px) rotate(3deg); }
+    100% { transform: translate(0, 0) rotate(0deg); }
+}
