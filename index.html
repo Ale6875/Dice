@@ -6,6 +6,7 @@
     <title>Gambling Room</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="assets/favicon.png" type="image/png">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
     <h1 id="startTitle">DICE</h1>
@@ -15,25 +16,25 @@
             <div class="users">
                 <img src="assets/dice1.svg" alt="Dice" class="dice-icon">
                 <h3>USER 1 :</h3>
-                <input type="text" name="user1" placeholder="Name" required>
+                <input type="text" name="user1" placeholder="Name">
             </div>
 
             <div class="users">
-                <img src="assets/dice1.svg" alt="Dice" class="dice-icon">
+                <img src="assets/dice2.svg" alt="Dice" class="dice-icon">
                 <h3>USER 2 :</h3>
-                <input type="text" name="user2" placeholder="Name" required>
+                <input type="text" name="user2" placeholder="Name">
             </div>
 
             <div class="users">
-                <img src="assets/dice1.svg" alt="Dice" class="dice-icon">
+                <img src="assets/dice3.svg" alt="Dice" class="dice-icon">
                 <h3>USER 3 :</h3>
-                <input type="text" name="user3" placeholder="Name" required>
+                <input type="text" name="user3" placeholder="Name">
             </div>
 
             <div id="send">
                 <div class="select-group">
                     <label for="dice">Number of dice</label>
-                    <select name="dice" id="dice" required>
+                    <select name="dice" id="dice">
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
@@ -45,7 +46,7 @@
     
                 <div class="select-group">
                     <label for="games">Number of rounds</label>
-                    <select name="games" id="games" required>
+                    <select name="games" id="games">
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
@@ -59,5 +60,26 @@
             </div>
         </form>
     </div>
+
+    <script>
+        document.querySelector("form").addEventListener("submit", function(e) {
+            const user1 = document.querySelector('input[name="user1"]').value.trim();
+            const user2 = document.querySelector('input[name="user2"]').value.trim();
+            const user3 = document.querySelector('input[name="user3"]').value.trim();
+    
+            if (!user1 || !user2 || !user3) {
+                e.preventDefault();
+    
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Missing Information',
+                    text: 'Please fill in all user names before starting the game.',
+                });
+    
+                return;
+            }
+        });
+    </script>
+    
 </body>
 </html>
