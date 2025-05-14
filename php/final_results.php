@@ -12,7 +12,7 @@ session_start();
     <link rel="stylesheet" href="../css/finalResultsStyle.css">
 </head>
 <body>
-    <h1 id="title">KONČNI REZULTATI</h1>
+    <h1 id="finalTitle">END RESULTS</h1>
 
     <div id="main">
         <div class="results-container">
@@ -41,7 +41,7 @@ session_start();
             
             <?php foreach ($_SESSION['results'] as $game => $players): ?>
                 <div class="game-result">
-                    <h2 class="game-title">Igra <?php echo $game; ?></h2>
+                    <h2 class="game-title">Game <?php echo $game; ?></h2>
                     
                     <?php 
                     $playerTotals = [];
@@ -55,9 +55,9 @@ session_start();
                         <thead>
                             <tr>
                                 <th>#</th>
-                                <th>Igralec</th>
-                                <th>Meti</th>
-                                <th>Skupaj</th>
+                                <th>Player</th>
+                                <th>Throws</th>
+                                <th>Total</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -88,7 +88,7 @@ session_start();
             <?php endforeach; ?>
             
             <div class="new-game-container">
-                <a href="../index.html" class="new-game-btn">Nova igra</a>
+                <a href="../index.html" class="new-game-btn">New game</a>
             </div>
         </div>
 
