@@ -33,12 +33,12 @@ $current_player = $_SESSION['players'][$_SESSION['current_player']];
     <link rel="stylesheet" href="../css/gameStyle.css">
 </head>
 <body>
-    <h1 id="title">IGRA <?php echo $_SESSION['current_game']; ?> OD <?php echo $_SESSION['num_games']; ?></h1>
+    <h1 id="title">ROUND <?php echo $_SESSION['current_game']; ?> OF <?php echo $_SESSION['num_games']; ?></h1>
 
     <div id="main">
         <div class="game-info">
-            <h2><?php echo $current_player; ?>, vrži kocke!</h2>
-            <p>Vreči morate <?php echo $_SESSION['num_dice']; ?> kock</p>
+            <h2><?php echo $current_player; ?>, throw the dice!</h2>
+            <p>>You have to throw! <?php echo $_SESSION['num_dice']; ?> dice</p>
         </div>
 
         <div class="dice-container" id="dice-container">
@@ -49,14 +49,14 @@ $current_player = $_SESSION['players'][$_SESSION['current_player']];
 
         <form action="process_roll.php" method="POST" id="roll-form">
             <input type="hidden" name="rolls" id="rolls-input">
-            <button type="button" class="roll-button" id="roll-button">Vreči kocke</button>
+            <button type="button" class="roll-button" id="roll-button">Throw dice</button>
         </form>
 
         <div class="player-status">
             <?php foreach ($_SESSION['players'] as $index => $player): ?>
                 <div class="player-box <?php echo $index === $_SESSION['current_player'] ? 'current-player' : ''; ?>">
                     <h3><?php echo $player; ?></h3>
-                    <p>Skupaj: <?php echo $_SESSION['cumulative_scores'][$player] ?? 0; ?></p>
+                    <p>Total: <?php echo $_SESSION['cumulative_scores'][$player] ?? 0; ?></p>
                 </div>
             <?php endforeach; ?>
         </div>
@@ -71,7 +71,7 @@ $current_player = $_SESSION['players'][$_SESSION['current_player']];
             const rollsInput = document.getElementById('rolls-input');
             
             button.disabled = true;
-            button.textContent = 'Vrečem...';
+            button.textContent = '...';
             
             diceImages.forEach(dice => {
                 dice.classList.add('rolling');
